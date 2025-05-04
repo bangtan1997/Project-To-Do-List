@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvCatatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Catatan"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBuatCatatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buat Catatan baru"
+        android:textSize="16sp"
+        android:textColor="#888888"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCatatan" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBuatCatatan">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Skincare Routine Section -->
+            <TextView
+                android:id="@+id/tvSkincare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFE0E0"
+                android:padding="16dp"
+                android:text="Skincare Routine"
+                android:textColor="#EC407A"
+                android:textSize="18sp" />
+
+            <!-- Tugas Section -->
+            <TextView
+                android:id="@+id/tvTugas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E0E8FF"
+                android:padding="16dp"
+                android:text="Tugas"
+                android:textColor="#80A0FF"
+                android:textSize="18sp"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Belanja Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F5E0FF"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvBelanja"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Belanja"
+                    android:textColor="#D090FF"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp" />
+
+                <CheckBox
+                    android:id="@+id/cbSayuran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sayuran" />
+
+                <CheckBox
+                    android:id="@+id/cbBuah"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Buah" />
+
+                <CheckBox
+                    android:id="@+id/cbPakaian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pakaian" />
+
+                <CheckBox
+                    android:id="@+id/cbMakanan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Makanan" />
+
+                <CheckBox
+                    android:id="@+id/cbMinuman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Minuman" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/home"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:contentDescription="Home"
+            app:tint="#FF9AAA" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/waste"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:contentDescription="Delete"
+            app:tint="#FF9AAA" />
+
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/plus"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:contentDescription="Add"
+            app:tint="#FF9AAA" />
+
+        <ImageButton
+            android:id="@+id/btnSearch"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/search"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:contentDescription="Search"
+            app:tint="#FF9AAA" />
+
+        <ImageButton
+            android:id="@+id/btnMore"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:src="@drawable/titik"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:contentDescription="More"
+            app:tint="#FF9AAA" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".BelanjaActivity">
+
+    <!-- Top Navigation Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/left_arrow"
+            app:tint="#FFB5C9"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageButton
+            android:id="@+id/btnCheck"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:padding="8dp"
+            android:src="@drawable/cek"
+            android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Check button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Shopping List Title and Items -->
+    <LinearLayout
+        android:id="@+id/taskListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar">
+
+        <TextView
+            android:id="@+id/tvTugas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Catatan Tugas"
+            android:textSize="24sp"
+            android:textColor="#FF94B1"
+        android:layout_marginBottom="16dp" />
+
+        <CheckBox
+            android:id="@+id/cbMatematika"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tugas Matematika"
+            android:textColor="#000000"
+            android:buttonTint="#FF94B1"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbFisika"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tugas Fisika"
+            android:textColor="#000000"
+            android:buttonTint="#FF94B1"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbBahasa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tugas Bahasa"
+            android:textColor="#000000"
+            android:buttonTint="#FF94B1"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbSejarah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tugas Sejarah"
+            android:textColor="#000000"
+            android:buttonTint="#FF94B1"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbBiologi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tugas Biologi"
+            android:textColor="#000000"
+            android:buttonTint="#FF94B1"
+            android:layout_marginBottom="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbEkonomi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tugas Ekonomi"
+            android:textColor="#000000"
+            android:buttonTint="#FF94B1" />
+    </LinearLayout>
+
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnTrash"
+            android:layout_width="5dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete"
+            android:scaleType="fitCenter"
+            android:src="@drawable/waste"
+            app:tint="#FF94B1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btnCamera"
+            android:layout_width="5dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Camera"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera"
+            app:tint="#FF94B1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:layout_width="5dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Edit"
+            android:scaleType="fitCenter"
+            android:src="@drawable/pen"
+            app:tint="#FF94B1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/btnMore"
+            android:layout_width="5dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="More options"
+            android:scaleType="fitCenter"
+            android:src="@drawable/titik"
+            app:tint="#FF94B1"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
